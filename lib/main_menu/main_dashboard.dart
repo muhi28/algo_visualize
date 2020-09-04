@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 
-/**
- *
- */
+/// main menu dashboard widget
 class MainMenuDashboard extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _MainDashboardState();
 }
 
-/**
- *
- */
+/// Defines main state for our dashboard
 class _MainDashboardState extends State<MainMenuDashboard> {
   @override
   Widget build(BuildContext context) {
@@ -21,49 +17,37 @@ class _MainDashboardState extends State<MainMenuDashboard> {
         backgroundColor: Color.fromRGBO(49, 87, 110, 1.0),
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 2.0),
-        child: GridView.count(
-          crossAxisCount: 2,
-          padding: EdgeInsets.all(3.0),
-          children: <Widget>[
-            createDashboardItem("Sortieralgorithmen", Icons.book),
-            createDashboardItem("Suchalgorithmen", Icons.book),
-            createDashboardItem("Datenstrukturen", Icons.book)
-          ],
+        padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              RaisedButton(
+                  onPressed: () {},
+                  child:
+                      const Text('Suchalgos', style: TextStyle(fontSize: 30))),
+              const SizedBox(height: 30),
+              RaisedButton(
+                  onPressed: () {},
+                  child: const Text('Sortieralgos',
+                      style: TextStyle(fontSize: 30))),
+              const SizedBox(height: 30),
+              RaisedButton(
+                  onPressed: () {},
+                  child: const Text('Datenstrukturen',
+                      style: TextStyle(fontSize: 30))),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Card createDashboardItem(String title, IconData icon) {
-    return Card(
-        elevation: 1.0,
-        margin: new EdgeInsets.all(8.0),
-        child: Container(
-          decoration: BoxDecoration(color: Color.fromRGBO(220, 220, 220, 1.0)),
-          child: new InkWell(
-            onTap: () {},
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisSize: MainAxisSize.min,
-              verticalDirection: VerticalDirection.down,
-              children: <Widget>[
-                SizedBox(height: 50.0),
-                Center(
-                    child: Icon(
-                  icon,
-                  size: 40.0,
-                  color: Colors.black,
-                )),
-                SizedBox(height: 20.0),
-                new Center(
-                  child: new Text(title,
-                      style:
-                          new TextStyle(fontSize: 18.0, color: Colors.black)),
-                )
-              ],
-            ),
-          ),
-        ));
+  /// Creates a new dashboard item
+  RaisedButton createDashboardItem(String title, IconData icon) {
+    return RaisedButton(
+      onPressed: () {},
+      child: const Text('Enabled Button', style: TextStyle(fontSize: 20)),
+    );
   }
 }
