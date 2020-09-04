@@ -17,29 +17,68 @@ class _MainDashboardState extends State<MainMenuDashboard> {
         backgroundColor: Color.fromRGBO(49, 87, 110, 1.0),
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
-        child: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 2),
+          child: GridView.count(
+            crossAxisCount: 2,
             children: <Widget>[
-              RaisedButton(
+              Center(
+                  child: RaisedButton.icon(
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                onPressed: () {},
+                icon: Icon(Icons.book),
+                label: Text(
+                  "Suchalgor.",
+                  style: TextStyle(fontSize: 17),
+                ),
+              )),
+              Center(
+                  child: RaisedButton.icon(
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                onPressed: () {},
+                icon: Icon(Icons.book),
+                label: Text(
+                  "Sortieralgor.",
+                  style: TextStyle(fontSize: 17),
+                ),
+              )),
+              Center(
+                  child: RaisedButton.icon(
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                onPressed: () {},
+                icon: Icon(Icons.book),
+                label: Text("Datenstr.", style: TextStyle(fontSize: 17)),
+              )),
+            ],
+          )
+          /*child: Center(
+
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              RaisedButton.icon(
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   onPressed: () {},
-                  child:
-                      const Text('Suchalgos', style: TextStyle(fontSize: 30))),
+                  icon: Icon(Icons.book),
+                  label: Text("Suchalgor.",style: TextStyle(fontSize: 30),),
+              ),
               const SizedBox(height: 30),
-              RaisedButton(
+              RaisedButton.icon(
+                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   onPressed: () {},
-                  child: const Text('Sortieralgos',
-                      style: TextStyle(fontSize: 30))),
+                  icon: Icon(Icons.book),
+                  label: Text("Sortieralgor.",style: TextStyle(fontSize: 30),),
+              ),
               const SizedBox(height: 30),
-              RaisedButton(
+              RaisedButton.icon(
+                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   onPressed: () {},
-                  child: const Text('Datenstrukturen',
-                      style: TextStyle(fontSize: 30))),
+                  icon: Icon(Icons.book),
+                  label: Text("Datenstr.",style: TextStyle(fontSize: 30)),
+              ),
             ],
           ),
-        ),
-      ),
+        ),*/
+          ),
     );
   }
 
